@@ -8,18 +8,22 @@
     <title>Flashcards</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#101010">
 </head>
 
 <body>
+    <div class="add-flashcards">
+        <i class="fas fa-plus-circle"></i>
+    </div>
     <div class="flashcards">
-        <div class="flashcards__number">1</div>
+        <div class="flashcards__number">1/100</div>
         <div class="flashcards__english-word flashcards__word">unnecessary</div>
         <div class="flashcards__polish-word flashcards__word"></div>
-        <div class="flashcards__show-answer"></div>
-        <div class="flashcards__correct"></div>
-        <div class="flashcards__incorrect"></div>
+        <div class="flashcards__show-answer ">Show answers <i class="fas fa-chevron-right"></i></div>
+        <div class="flashcards__correct  hide">I Know</div>
+        <div class="flashcards__incorrect hide">I don't Know</div>
     </div>
 
     <script src="js/flashcards.js"></script>
