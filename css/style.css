@@ -7,13 +7,34 @@
   font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202020;
+  border-radius: 10px;
+}
+
 body {
   background-color: #101010;
 }
 
-.add-flashcards {
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.add-flashcards,
+.flashcards-list-btn {
   color: white;
   margin: 15px;
+  cursor: pointer;
 }
 
 .fa-plus-circle {
@@ -25,7 +46,161 @@ body {
 .fa-plus-circle:hover {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.fa-list {
+  font-size: 3.5rem;
+}
+
+.add-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 300px;
+  height: 0px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 15px 0px #000000;
+          box-shadow: 0px 0px 15px 0px #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.add-menu input {
+  width: 230px;
+  margin: 5px;
+  padding: 15px;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: black;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+
+.add-menu input::-webkit-input-placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.add-menu input:-ms-input-placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.add-menu input::-ms-input-placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.add-menu input::placeholder {
+  color: black;
+  font-weight: normal;
+}
+
+.add-menu input:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.add-menu button {
+  margin-top: 20px;
+  padding: 15px 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background-color: #000;
+  border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.add-menu button:hover {
+  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+          box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+
+.flashcards-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 300px;
+  min-height: 0;
+  max-height: 0;
+  overflow-y: scroll;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 15px 0px #000000;
+          box-shadow: 0px 0px 15px 0px #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.flashcards-list__group h1 {
+  font-size: 2rem;
+  margin: 20px;
+  border-bottom: 1px solid black;
+}
+
+.flashcards-list__correct, .flashcards-list__incorrect {
+  width: 140px;
+  margin-left: 25px;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+}
+
+.flashcards-list__correct {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #08c90f;
+  color: white;
+  font-weight: bold;
+}
+
+.flashcards-list__incorrect {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f22929;
+  color: white;
+  font-weight: bold;
+}
+
+.show-menu {
+  height: 300px;
+}
+
+.show-list {
+  min-height: 300px;
+  max-height: 600px;
 }
 
 .flashcards {
