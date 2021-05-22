@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background-color: #101010;
+}
+
+.flashcards {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.flashcards__number {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  top: 10px;
+  left: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.flashcards__word {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
