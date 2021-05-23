@@ -1,3 +1,4 @@
+// ### add flashcards words###
 //define array
 let words = [];
 let translations = [];
@@ -32,3 +33,7 @@ const addWords = function() {
 
 }
 document.querySelector('.add-btn').addEventListener('click', addWords);
+
+// ## correct and incorrect words ###
+let correct = [];
+let incorrect = [];
