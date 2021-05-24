@@ -14,22 +14,26 @@ const addWords = function() {
     let inputTranslationValue = document.querySelector('.add-menu__input-translate').value;
     let inputGroupValue = document.querySelector('.add-menu__input-group').value;
     //if the groups do not exist add to array
-    if (!groups.includes(inputGroupValue)) {
+    if (!groups.includes(inputGroupValue) && (inputWordValue !== '' && inputTranslationValue !== '' && inputGroupValue !== '')) {
         groups.push(inputGroupValue);
         words.push([]);
         translations.push([]);
     }
     //add content to array
-    const groupIndex = groups.indexOf(inputGroupValue);
-    words[groupIndex].push(inputWordValue);
-    translations[groupIndex].push(inputTranslationValue);
-    //clear value
-    document.querySelector('.add-menu__input-word').value = '';
-    document.querySelector('.add-menu__input-translate').value = '';
-    //save array to localStorage
-    localStorage.setItem('saveWords', JSON.stringify(words));
-    localStorage.setItem('saveTranslations', JSON.stringify(translations));
-    localStorage.setItem('saveGroups', JSON.stringify(groups));
+    if (inputWordValue !== '' && inputTranslationValue !== '' && inputGroupValue !== '') {
+        const groupIndex = groups.indexOf(inputGroupValue);
+        words[groupIndex].push(inputWordValue);
+        translations[groupIndex].push(inputTranslationValue);
+        //clear value
+        document.querySelector('.add-menu__input-word').value = '';
+        document.querySelector('.add-menu__input-translate').value = '';
+        //save array to localStorage
+        localStorage.setItem('saveWords', JSON.stringify(words));
+        localStorage.setItem('saveTranslations', JSON.stringify(translations));
+        localStorage.setItem('saveGroups', JSON.stringify(groups));
+    }
+
+
 
 }
 document.querySelector('.add-btn').addEventListener('click', addWords);
