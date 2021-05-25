@@ -76,6 +76,14 @@ const chooseFlashcardsFromList = function() {
 $(document).on('click', '.choose', chooseFlashcardsFromList);
 
 // ##show answers##
-// ## correct and incorrect words ###
+const showAnswers = function() {
+    document.querySelector('.flashcards__first-language-word').classList.toggle('hide');
+    document.querySelector('.flashcards__second-language-word').classList.toggle('hide');
+    document.querySelector('.flashcards__show-answer').classList.toggle('hide');
+    document.querySelector('.flashcards__correct').classList.toggle('hide');
+    document.querySelector('.flashcards__incorrect').classList.toggle('hide');
+}
+$(document).on('click', '.flashcards__show-answer', showAnswers)
+    // ## correct and incorrect words ###
 let correct = [];
 let incorrect = [];
