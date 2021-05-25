@@ -84,6 +84,8 @@ const showAnswers = function() {
     document.querySelector('.flashcards__incorrect').classList.toggle('hide');
 }
 $(document).on('click', '.flashcards__show-answer', showAnswers)
-    // ## correct and incorrect words ###
+    //##completion of data##
+
+// ## correct and incorrect words ###
 let correct = [];
 let incorrect = [];
