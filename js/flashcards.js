@@ -53,15 +53,29 @@ const addGroupToList = () => {
             div.innerHTML = `
         <h1 data-nameGroup=''>${groups[lastItemIndex]}</h1>
         <div class="flashcards-list__item">
-            <div class="flashcards-list__all-words" data-all='${index}'>All words</div>
-            <div class="flashcards-list__correct" data-correct='${index}'>Correct words</div>
-            <div class="flashcards-list__incorrect" data-incorect='${index}'>Incorrect words</div>
+            <div class="flashcards-list__all-words choose" data-btn='all${index}'>All words</div>
+            <div class="flashcards-list__correct choose" data-btn='true${index}'>Correct words</div>
+            <div class="flashcards-list__incorrect choose" data-btn='false${index}'>Incorrect words</div>
         </div>`;
             flashcardsList.appendChild(div);
         }
         const flashcardsListHtml = flashcardsList.innerHTML;
         localStorage.setItem(`flashcardsListHtml`, flashcardsListHtml);
     }
-    // ## correct and incorrect words ###
+    // ##choose flashcards##
+const chooseFlashcardsFromList = function() {
+    const mainCard = document.querySelector('.flashcards');
+    if (this.dataset.btn.includes('all')) {
+        mainCard.style.display = 'block';
+    } else if (this.dataset.btn.includes('true')) {
+        mainCard.style.display = 'block';
+    } else if (this.dataset.btn.includes('false')) {
+        mainCard.style.display = 'block';
+    }
+}
+$(document).on('click', '.choose', chooseFlashcardsFromList);
+
+// ##show answers##
+// ## correct and incorrect words ###
 let correct = [];
 let incorrect = [];
