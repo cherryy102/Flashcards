@@ -44,7 +44,6 @@ document.querySelector('.add-btn').addEventListener('click', addWords);
 //add group to list
 const addGroupToList = () => {
         const flashcardsList = document.querySelector('.flashcards-list');
-        // const flashcardsGroup = document.querySelectorAll('.flashcards-list__group');
         const index = groups.indexOf(inputGroup.value);
         if (groups.length > 0) {
             const lastItemIndex = groups.length - 1;
